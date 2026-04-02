@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combos Mega Fiesta | Las mejores hamburguesas y panchos en Wilde</title>
+    <meta name="description" content="Disfrutá de los mejores combos para fiestas en Wilde. Hamburguesas, panchos, papas fritas y más. ¡Hacé tu pedido por WhatsApp!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="Logo Combos Mega Fiesta">
+                </div>
+                <div class="logo-text">
+                    <span>COMBOS MEGA</span>
+                    <span class="highlight-text">FIESTA</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Nuestros Productos</a></li>
+                <li><a href="#contacto">Dónde Comprar</a></li>
+            </ul>
+            <div class="nav-btns">
+                <a href="https://wa.me/5491124031773" class="btn-cta nav-cta">Hacer Pedido</a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="logo-text">
+                    <span>COMBOS MEGA</span>
+                    <span class="highlight-text">FIESTA</span>
+                </div>
+            </div>
+            <button class="menu-close" id="menuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Nuestros Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/5491124031773" class="btn-primary w-100">Pedir por WhatsApp</a>
+        </div>
+    </div>
+
+    <header id="inicio" class="hero" style="position: relative; height: 100vh; overflow: hidden;">
+        <!-- Capa de fondo con imagen local y desenfoque ajustado -->
+        <div class="hero-bg-layer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('img/local-frente.jpg') no-repeat center center/cover; filter: brightness(0.7); z-index: 1;"></div>
+        
+        <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(46, 18, 91, 0.4) 0%, rgba(46, 18, 91, 0.6) 100%); z-index: 2; position: absolute; inset: 0;"></div>
+        
+        <div class="container hero-content" style="position: relative; z-index: 10;">
+            <h1 class="fade-in-delay">Todo para tu <br><span class="highlight">Mega Fiesta</span></h1>
+            <p class="fade-in-delay">Venta mayorista de hamburguesas, panchos y snacks. Calidad Swift y Paty asegurada por bulto cerrado.</p>
+            <div class="hero-btns fade-in-delay">
+                <a href="#productos" class="btn-primary">Ver Catálogo</a>
+                <a href="https://wa.me/5491124031773" class="btn-secondary"><i class="fab fa-whatsapp"></i> Precios Mayoristas</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Instagram Stories Bar -->
+    <section class="stories-section">
+        <div class="container overflow-wrapper">
+            <div class="stories-container">
+                <a href="https://www.instagram.com/combos.mega.fiesta/" class="story-item" target="_blank">
+                    <div class="story-circle">
+                        <img src="images/products/hamburguesa-ug.jpeg" alt="Hamburguesas">
+                    </div>
+                    <span>Hamburguesas</span>
+                </a>
+                <a href="https://www.instagram.com/combos.mega.fiesta/" class="story-item" target="_blank">
+                    <div class="story-circle">
+                        <img src="images/products/pancho-champion.jpeg" alt="Panchos">
+                    </div>
+                    <span>Panchos</span>
+                </a>
+                <a href="https://www.instagram.com/combos.mega.fiesta/" class="story-item" target="_blank">
+                    <div class="story-circle">
+                        <img src="promo.png" alt="Combos">
+                    </div>
+                    <span>Combos</span>
+                </a>
+                <a href="https://www.instagram.com/combos.mega.fiesta/" class="story-item" target="_blank">
+                    <div class="story-circle">
+                        <img src="images/products/snacks-leo.jpeg" alt="Snacks">
+                    </div>
+                    <span>Snacks</span>
+                </a>
+                <a href="https://www.instagram.com/combos.mega.fiesta/" class="story-item" target="_blank">
+                    <div class="story-circle ig-logo-circle">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span>¡Seguinos!</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mega Promo Section - V2 Premium -->
+    <section class="promo-section-v2">
+        <div class="promo-bg-glow"></div>
+        <div class="promo-light-orb orb-1"></div>
+        <div class="promo-light-orb orb-2"></div>
+        
+        <div class="container promo-container">
+            <div class="promo-card-glass fadeInUp">
+                <div class="promo-badge-v2">OFERTA DE TEMPORADA</div>
+                <h2>MEGA PROMO <br><span class="highlight">FIESTA</span></h2>
+                <p>24 Panchos + 24 Hamburguesas + 2 Salsas Benidorm de Regalo</p>
+                <div class="promo-cta-box">
+                    <a href="https://wa.me/5491124031773?text=Hola!%20Me%20interesa%20la%20Mega%20Promo%20Fiesta" class="btn-primary">¡PEDIR AHORA!</a>
+                </div>
+            </div>
+            <div class="promo-hero-img fadeInUp">
+                <div class="img-glow-base"></div>
+                <img src="promo.png" alt="Mega Promo Combo Fiesta">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats/Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-card">
+                <i class="fas fa-boxes"></i>
+                <h3>Venta Mayorista</h3>
+                <p>Precios especiales para eventos, salones y comercios.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-truck-loading"></i>
+                <h3>Reparto en el Día</h3>
+                <p>Llegamos a todo Wilde y alrededores rápidamente.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-award"></i>
+                <h3>Marcas Líderes</h3>
+                <p>Swift, Paty, Vienissima y Panificados Artesanales.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Categories Section -->
+    <style>
+        .products-grid-center {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .category-card {
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 220px; 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 24px; 
+            text-decoration: none; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            flex: 0 1 calc(33.333% - 20px);
+            min-width: 300px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 900px) {
+            .category-card { flex: 0 1 calc(50% - 15px); }
+        }
+        @media (max-width: 600px) {
+            .category-card { flex: 0 1 100%; min-width: unset; height: 180px; }
+        }
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(118, 32, 168, 0.5);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+        .category-card .card-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: brightness(0.75) contrast(1.1); transition: all 0.8s ease;
+        }
+        .category-card .card-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(46, 18, 91, 0) 0%, rgba(46, 18, 91, 0.8) 100%); transition: all 0.5s ease;
+        }
+        .category-card:hover .card-bg {
+            filter: brightness(0.9) contrast(1.2);
+            transform: scale(1.1);
+        }
+        .category-card:hover .card-overlay {
+            background: linear-gradient(180deg, rgba(255, 213, 0, 0.1) 0%, rgba(46, 18, 91, 0.9) 100%);
+        }
+        .category-content {
+            position: relative;
+            z-index: 5;
+            text-align: center;
+            padding: 20px;
+            transition: all 0.5s ease;
+        }
+        .category-card i {
+            display: block;
+            font-size: 2.5rem;
+            color: var(--accent-yellow);
+            margin-bottom: 12px;
+            opacity: 0.9;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+        }
+        .category-card h3 {
+            color: #fff; margin: 0; font-size: 1.6rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; text-shadow: 0 4px 12px rgba(0,0,0,1); line-height: 1.2;
+        }
+        .view-more {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-yellow);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .category-card:hover i { transform: translateY(0); opacity: 1; }
+        .category-card:hover .view-more { opacity: 1; transform: translateY(0); }
+    </style>
+    <section id="productos" class="products-section" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header fadeInUp">
+                <h2>Nuestros <span class="highlight">Productos</span></h2>
+                <p>Calidad mayorista para tus eventos y comercio</p>
+            </div>
+
+            <div class="products-grid-center">
+                
+                <!-- Hamburguesas -->
+                <a href="hamburguesas.html" class="category-card fadeInUp">
+                    <div class="card-bg" style="background-image: url('images/products/hamburguesa-ug.jpeg');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="category-content">
+                        <i class="fas fa-burger"></i>
+                        <h3>HAMBURGUESAS</h3>
+                        <div class="view-more">VER CATÁLOGO →</div>
+                    </div>
+                </a>
+
+                <!-- Maxi Hamburguesas -->
+                <a href="maxi-hamburguesas.html" class="category-card fadeInUp">
+                    <div class="card-bg" style="background-image: url('images/products/hamburguesa-maxi.jpeg');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="category-content">
+                        <i class="fas fa-hamburger"></i>
+                        <h3>MAXI<br>HAMBURGUESAS</h3>
+                        <div class="view-more">VER CATÁLOGO →</div>
+                    </div>
+                </a>
+
+                <!-- Panchos -->
+                <a href="panchos.html" class="category-card fadeInUp">
+                    <div class="card-bg" style="background-image: url('images/products/pancho-champion.jpeg');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="category-content">
+                        <i class="fas fa-hotdog"></i>
+                        <h3>PANCHOS</h3>
+                        <div class="view-more">VER CATÁLOGO →</div>
+                    </div>
+                </a>
+
+                <!-- Super Panchos -->
+                <a href="super-panchos.html" class="category-card fadeInUp">
+                    <div class="card-bg" style="background-image: url('images/products/super-pancho.jpeg');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="category-content">
+                        <i class="fas fa-fire-burner"></i>
+                        <h3>SUPER<br>PANCHOS</h3>
+                        <div class="view-more">VER CATÁLOGO →</div>
+                    </div>
+                </a>
+
+                <!-- Snacks -->
+                <a href="snacks.html" class="category-card fadeInUp">
+                    <div class="card-bg" style="background-image: url('images/products/snacks-leo.jpeg');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="category-content">
+                        <i class="fas fa-cookie"></i>
+                        <h3>SNACKS</h3>
+                        <div class="view-more">VER CATÁLOGO →</div>
+                    </div>
+                </a>
+
+                <!-- Mega Combos -->
+                <a href="mega-combos.html" class="category-card fadeInUp">
+                    <div class="card-bg" style="background-image: url('promo.png');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="category-content">
+                        <i class="fas fa-gift"></i>
+                        <h3>MEGA COMBOS</h3>
+                        <div class="view-more">VER CATÁLOGO →</div>
+                    </div>
+                </a>
+
+                <!-- Congelados -->
+                <a href="congelados.html" class="category-card fadeInUp">
+                    <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744abd?q=80&w=1920&auto=format&fit=crop'); background-color: #3b0e5d; filter: brightness(0.85);"></div>
+                    <div class="card-overlay"></div>
+                    <div class="category-content">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>CONGELADOS</h3>
+                        <div class="view-more">VER CATÁLOGO →</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo que dicen <span class="highlight">nuestros clientes</span></h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fadeInUp">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Buena relación precio/calidad. ¡Excelente precios y atención al cliente!"</p>
+                    <div class="client-info">
+                        <div class="client-img"></div>
+                        <div>
+                            <h4>Ely Alvarez</h4>
+                            <p>Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fadeInUp">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Tienen un montón de marcas y los precios son excelentes. Muy buena la atención, los recomiendo."</p>
+                    <div class="client-info">
+                        <div class="client-img"></div>
+                        <div>
+                            <h4>Carla Sanchez</h4>
+                            <p>Vecina de Wilde</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fadeInUp">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Mucha variedad, todas las marcas y muy buen precio. El que atiende es muy buena onda y te explica todo."</p>
+                    <div class="client-info">
+                        <div class="client-img"></div>
+                        <div>
+                            <h4>Ariel Suarez</h4>
+                            <p>Cliente recurrente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info/Contact Section -->
+    <section id="contacto" class="info-section">
+        <div class="container info-grid">
+            <div class="info-text">
+                <h2>¿Dónde estamos?</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Las Flores 910, Wilde, Buenos Aires</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horarios</h4>
+                        <p>Lunes a Sábados:<br>10:00 - 13:00hs | 16:00 - 20:00hs</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Teléfono / WhatsApp</h4>
+                        <p>15-2403-1773</p>
+                    </div>
+                </div>
+                <div class="social-links-contact">
+                    <a href="https://www.instagram.com/combos.mega.fiesta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/5491124031773"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="info-map glass">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.371408624996!2d-58.308012!3d-34.695811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3326a09c65721%3A0x9c8ea3866435fb7e!2sLas%20Flores%20910%2C%20B1875DEF%20Gran%20Buenos%20Aires%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1774917781252!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-container">
+                        <div class="logo-circle" style="width: 50px; height: 50px;">
+                            <img src="logo.png" alt="Logo">
+                        </div>
+                        <div class="logo-text">
+                            <span>COMBOS MEGA</span>
+                            <span class="highlight-text">FIESTA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Combos Mega Fiesta. Todos los derechos reservados.</p>
+                <p>Hecho con ❤️ para tu fiesta.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5491124031773" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
