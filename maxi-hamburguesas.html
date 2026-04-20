@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxi Hamburguesas | Combos Mega Fiesta</title>
+    <meta name="description" content="Disfrutá de los mejores combos de hamburguesas para fiestas en Wilde.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.png">`n</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-container" style="cursor: pointer;" onclick="window.location.href='index.html'">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="Logo Combos Mega Fiesta">
+                </div>
+                <div class="logo-text">
+                    <span>COMBOS MEGA</span>
+                    <span class="highlight-text">FIESTA</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#combos">Productos</a></li>
+                <li><a href="index.html#contacto">Dónde Comprar</a></li>
+            </ul>
+            <div class="nav-btns">
+                <a href="https://wa.me/5491124031773" class="btn-cta nav-cta">Hacer Pedido</a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <div class="logo-text">
+                    <span>COMBOS MEGA</span>
+                    <span class="highlight-text">FIESTA</span>
+                </div>
+            </div>
+            <button class="menu-close" id="menuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#combos">Productos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/5491124031773" class="btn-primary w-100">Pedir por WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Hero Premium without image -->
+    <style>
+        .hero-premium {
+            position: relative;
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #2E125B; /* Coincide exactamente con --primary-bg */
+            overflow: hidden;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Animated Glowing Orbs (Brand Colors) */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.8;
+            animation: orbFloat 10s infinite alternate ease-in-out;
+            z-index: 1;
+        }
+        .orb-1 { width: 50vw; height: 50vw; background: radial-gradient(circle, #3F1E7A, transparent 70%); top: -20%; left: -10%; animation-duration: 12s; }
+        .orb-2 { width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent 70%); bottom: -10%; right: -10%; animation-duration: 14s; }
+        .orb-3 { width: 30vw; height: 30vw; background: radial-gradient(circle, rgba(230, 57, 70, 0.3), transparent 70%); top: 40%; left: 40%; animation-duration: 8s; }
+
+        @keyframes orbFloat {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-50px) scale(1.1); }
+        }
+
+        /* Glassmorphism Card content */
+        .hero-glass-card {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.08); /* Coincide con --surface-glass */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 50px 30px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUpFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+        }
+
+        @keyframes slideUpFade {
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Typography & Decor */
+        .hero-premium h1 {
+            font-size: clamp(2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            margin: 0 0 15px 0;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.3));
+            word-wrap: break-word;
+        }
+        
+        .hero-premium .subtitle {
+            color: #FFD700;
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.4);
+            padding-bottom: 6px;
+        }
+
+        .hero-premium p.desc {
+            color: #E0E0E0;
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            line-height: 1.5;
+        }
+
+        .premium-badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .premium-badge {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .premium-badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            border-color: #ffcd00;
+        }
+        .premium-badge i { color: #ffcd00; font-size: 1.1rem; }
+    </style>
+
+    <header class="hero-premium">
+        <!-- Background Orbs -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <!-- content -->
+        <div class="container" style="display:flex; justify-content:center; width: 100%;">
+            <div class="hero-glass-card">
+                <span class="subtitle">Catálogo de Productos</span>
+                <h1>Maxi Hamburguesas</h1>
+                <p class="desc">Variedad de marcas, medallones gigantes y combos cerrados. La base principal para que a tu evento no le falte absolutamente nada.</p>
+                
+                <div class="premium-badges">
+                    <div class="premium-badge"><i class="fas fa-boxes"></i> Pack X24 / Cajas</div>
+                    <div class="premium-badge"><i class="fas fa-bolt"></i> Entrega Rápida</div>
+                    <div class="premium-badge"><i class="fas fa-award"></i> Calidad Premium</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-grid">
+                <!-- Tarjeta 1 -->
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('img/maxi-hamburguesas/maxi_1.jpeg'); background-size: cover; background-position: center; height: 250px;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Combo Maxi Finexcor</h3>
+                        <p>MAXI HAMBURGUESAS FINEXCOR 120 GR PARRILLERAS + PANES + ADEREZO</p>
+                        <div class="card-footer" style="display: flex; justify-content: center; width: 100%;">
+                            <a href="https://wa.me/5491124031773?text=Hola!%20Me%20interesa%20el%20Combo%20Maxi%20Finexcor" class="btn-primary" style="width: 100%; text-align: center; text-decoration: none;"><i class="fab fa-whatsapp"></i> Lo quiero</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('img/maxi-hamburguesas/maxi_2.jpeg'); background-size: cover; background-position: center; height: 250px;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Combo Maxi Black Label</h3>
+                        <p>MAXI HAMBURGUESAS BLACK LABEL 110 GR + PANES + ADEREZO</p>
+                        <div class="card-footer" style="display: flex; justify-content: center; width: 100%;">
+                            <a href="https://wa.me/5491124031773?text=Hola!%20Me%20interesa%20el%20Combo%20Maxi%20Black%20Label" class="btn-primary" style="width: 100%; text-align: center; text-decoration: none;"><i class="fab fa-whatsapp"></i> Lo quiero</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('img/maxi-hamburguesas/maxi_3.jpeg'); background-size: cover; background-position: center; height: 250px;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Combo Maxi Grupolar</h3>
+                        <p>MAXI HAMBURGUESAS GRUPOLAR 110 GR + PANES + ADEREZO</p>
+                        <div class="card-footer" style="display: flex; justify-content: center; width: 100%;">
+                            <a href="https://wa.me/5491124031773?text=Hola!%20Me%20interesa%20el%20Combo%20Maxi%20Grupolar" class="btn-primary" style="width: 100%; text-align: center; text-decoration: none;"><i class="fab fa-whatsapp"></i> Lo quiero</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-container" style="cursor: pointer;" onclick="window.location.href='index.html'">
+                        <div class="logo-circle" style="width: 50px; height: 50px;">
+                            <img src="logo.png" alt="Logo">
+                        </div>
+                        <div class="logo-text">
+                            <span>COMBOS MEGA</span>
+                            <span class="highlight-text">FIESTA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/combos.mega.fiesta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BCUcPDoLj/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/5491124031773"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Combos Mega Fiesta. Todos los derechos reservados.</p>
+                <p>Hecho con ❤️ para tu fiesta.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5491124031773" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
